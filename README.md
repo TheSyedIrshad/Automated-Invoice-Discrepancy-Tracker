@@ -3,7 +3,7 @@ _**By Syed Irshad A. | Target Role: Business Analyst – Billing & Invoicing | F
 
 ---
 
-## 🏢 Company Scenario (FIS Global – Realistic Context)
+## 🏢 Company Scenario (FIS Global)
 
 **FIS Global** is a leading financial tech provider offering enterprise-grade services like cloud hosting, support, and consulting to B2B clients.  
 
@@ -148,3 +148,11 @@ Built interactive dashboards in Excel and Tableau with:
 - [Excel Dashboard (.xlsx)](your_link_here)  
 - [Tableau Public Dashboard](your_link_here)  
 - [GitHub Repository](your_repo_link)  
+
+---
+
+## 🤝 Let’s Connect
+
+📧 irshadahmeddata@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/thesyedirshad/)  
+🌐 [Portfolio](https://github.com/TheSyedIrshad)
