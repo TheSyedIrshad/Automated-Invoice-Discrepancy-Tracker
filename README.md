@@ -1,87 +1,150 @@
-📊 Automated Invoice Discrepancy Resolution Dashboard
-🏢 Company Context
-At FIS Global, a leading financial technology provider offering enterprise-grade subscription services like cloud hosting, consulting hours, support, and licensing to B2B clients, billing accuracy is mission-critical. In such high-scale environments, invoices often contain multiple service line items tailored to each client contract (e.g., AMC, Hosting, Consulting). Due to the volume and variability of agreements, manual discrepancies—such as mismatched amounts, missing entries, or inconsistent frequencies—become frequent. Left unchecked, these small errors can snowball into revenue leakage and client dissatisfaction, ultimately impacting profitability and trust.
+# 📊 Automated Invoice Discrepancy Resolution Dashboard  
+_**By Syed Irshad A. | Target Role: Business Analyst – Billing & Invoicing | FIS Global (Hypothetical)**_
 
-________________________________________
-🔗 Problem Statement
-In the recurring billing process of service-based B2B companies, discrepancies often arise between the agreed contract value and the invoiced amount. These discrepancies may occur due to manual errors, misconfigured billing systems, unrecorded service variations, or delays in updates to pricing agreements. Over time, this leads to revenue leakage, trust deficits with clients, and operational inefficiencies.
-The goal is to develop an interactive and automated solution to:
-•	Track and categorize invoice discrepancies across service types and clients
-•	Quantify potential revenue loss
-•	Enable business users to take proactive corrective actions
-•	Improve billing accuracy and operational control
-________________________________________
-⚙️ Tools & Technologies Used
-•	Excel (Power Query, Formulas, Pivot Tables, Dashboard Design)
-•	Tableau (Dashboarding, Visual Analytics)
-•	Power BI (Alternative, optional)
-•	GitHub (Version control, documentation)
-________________________________________
-💡 Business Context & Importance
-B2B service companies that offer subscriptions, consulting, support, and software licensing often have multi-line item invoices. With varied service agreements across multiple clients (e.g., AMC, Hosting, Consulting), human error is inevitable. A small mismatch in billing can scale to significant losses across months.
-An automated discrepancy tracker empowers:
-•	Finance teams to audit invoices
-•	Account managers to ensure client satisfaction
-•	Leadership to spot high-risk revenue segments
-________________________________________
-🔄 Dataset Overview
-•	Clients: C001 to C0120 (120 clients)
-•	Service Types: AMC, Cloud Hosting, Consulting Hours, License Renewal, Support Ticket Closure
-•	Fields:
-o	Client_ID
-o	Invoice_Month
-o	Service_Type
-o	Agreed_Amount
-o	Invoiced_Amount
-o	Discrepancy_Amount (derived)
-o	Discrepancy_Type (Overbilled / Underbilled / Missing / Accurate)
-________________________________________
-✅ Solution Approach
-Step 1: Data Consolidation
-•	Combined multiple monthly invoice sheets using Power Query
-•	Created calculated columns for discrepancy and loss detection
-Step 2: Discrepancy Logic & Categorization
-•	Used IF logic to label discrepancy types:
-o	Overbilled: Invoiced > Agreed
-o	Underbilled: Invoiced < Agreed
-o	Missing: Invoice not raised
-o	Accurate: Invoiced = Agreed
-Step 3: Dashboard Design (Excel & Tableau)
-•	KPI Cards: Total Loss, Total Discrepancies, Avg. % Discrepancy, # of Affected Clients
-•	Visuals:
-o	Loss by Discrepancy Type
-o	Monthly Trends of Errors
-o	Heatmap: Clients vs. Service Type
-o	Drill-down: Individual Discrepancies
-Step 4: Insights & Recommendations
-•	Identified high-risk service types (e.g., Consulting and AMC)
-•	Pinpointed specific clients contributing to majority of revenue leakage
-•	Recommended implementing invoice validation checks & automated billing tools
-________________________________________
-📈 Key Results
-•	₹12+ thousand identified in cumulative loss across 4 months
-•	Over 40+ invoice records flagged for manual review
-•	Improved discrepancy visibility by 80%
-________________________________________
-🥇 Business Impact
-•	Finance Teams: Reduced manual audit time
-•	Revenue Ops: Preventive loss detection before client escalations
-•	Management: Real-time reporting for strategic decision-making
-________________________________________
-📚 Learnings & Takeaways
-•	Hands-on experience with Power Query and Tableau data pipeline
-•	Learned to build a real-world, decision-support system for recurring business problems
-•	Importance of domain understanding in analytics
-________________________________________
-💻 Future Scope
-•	Integrate alert system using Power Automate
-•	Expand scope to include payment delays and credit note mismatches
-•	Build anomaly detection model using Python for advanced scenarios
-________________________________________
+---
 
+## 🏢 Company Scenario (FIS Global – Realistic Context)
 
-👤 Author
-Irshad Ahmed
-Aspiring Business Analyst | BBA Business Analytics | SaaS Dreamer
-[LinkedIn Profile] | [GitHub Repository]
+**FIS Global** is a leading financial tech provider offering enterprise-grade services like cloud hosting, support, and consulting to B2B clients.  
 
+Each month, clients are billed across multiple service line items — AMC, Hosting, Licensing, Support, etc. However, due to:
+
+- Complex contracts  
+- Manual invoice generation  
+- Delayed updates to pricing  
+
+**billing discrepancies** creep in — leading to **revenue leakage** and **client dissatisfaction**.
+
+---
+
+## 🔗 Problem Statement
+
+In the recurring billing cycles of large B2B service companies:  
+
+Discrepancies arise due to:
+
+- Misconfigured systems  
+- Manual data entry errors  
+- Unrecorded service changes  
+- Delayed contract updates  
+
+These issues result in:
+
+- Lost revenue  
+- Audit overhead  
+- Declining trust  
+
+---
+
+## 🎯 Project Objective
+
+Build an **automated dashboard** to:
+
+- ✅ Identify invoice discrepancies across clients and service lines  
+- 📉 Quantify revenue loss  
+- 📌 Highlight underbilled/overbilled clients  
+- 🧠 Support proactive correction & business decisions  
+
+---
+
+## ⚙️ Tools & Tech Stack
+
+- **Excel** – Power Query, PivotTables, Calculated Columns  
+- **Tableau** – Interactive visual dashboard  
+- **GitHub** – Version control & documentation  
+
+---
+
+## 📁 Dataset Overview
+
+- **Clients**: 120 (C001 – C0120)  
+- **Time Period**: 4 months of invoice data  
+- **Fields**:
+  - `Client_ID`  
+  - `Invoice_Month`  
+  - `Service_Type` (AMC, Hosting, etc.)  
+  - `Agreed_Amount`  
+  - `Invoiced_Amount`  
+  - `Discrepancy_Amount` (Derived)  
+  - `Discrepancy_Type`:  
+    - *Overbilled*  
+    - *Underbilled*  
+    - *Missing*  
+    - *Accurate*  
+
+---
+
+## 🧠 Solution Workflow
+
+### ✅ Step 1: Data Consolidation  
+- Used Power Query to merge monthly invoice sheets  
+- Created calculated columns to detect discrepancy & loss  
+
+### ✅ Step 2: Discrepancy Logic  
+Used IF conditions to define:
+
+- **Overbilled**: Invoiced > Agreed  
+- **Underbilled**: Invoiced < Agreed  
+- **Missing**: No invoice raised  
+- **Accurate**: Exact match  
+
+### ✅ Step 3: Dashboard Design  
+Built interactive dashboards in Excel and Tableau with:
+
+- 📊 KPI Cards:
+  - Total Discrepancies  
+  - Total ₹ Loss  
+  - Avg. % Discrepancy  
+  - # Affected Clients  
+
+- 📈 Charts:
+  - Discrepancy Type vs. Loss  
+  - Monthly Error Trends  
+  - Heatmap (Client vs. Service)  
+  - Drill-down View: Record-level  
+
+### ✅ Step 4: Insights & Recommendations
+
+- **Consulting** & **AMC** had highest error rates  
+- Advised:  
+  - Automated invoice validation  
+  - Discrepancy alerts  
+  - Regular audits  
+
+---
+
+## 📈 Results & Business Impact
+
+- 💸 ₹12,000+ in potential losses flagged  
+- 🔍 40+ records isolated for review  
+- 🧠 80% improvement in discrepancy visibility  
+
+### Real-World Impact:
+
+- 📉 Reduced manual audit time  
+- ⚠️ Early warning for billing errors  
+- 📊 Strategic reporting for leadership  
+
+---
+
+## 🧠 Learnings
+
+- Built a **decision-support system**  
+- Learned **real-world Excel + Tableau integration**  
+- Understood importance of **domain + process knowledge** in analytics  
+
+---
+
+## 🔮 Future Scope
+
+- 🔔 Power Automate: Set up discrepancy alerts  
+- ⌛ Include payment delays & credit note tracking  
+- 🤖 Build anomaly detection model in Python  
+
+---
+
+## 📌 Links
+
+- [Excel Dashboard (.xlsx)](your_link_here)  
+- [Tableau Public Dashboard](your_link_here)  
+- [GitHub Repository](your_repo_link)  
