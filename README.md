@@ -1,5 +1,5 @@
 # 📊 Automated Invoice Discrepancy Resolution Dashboard  
-_**By Syed Irshad A. | Target Role: Business Analyst – Billing & Invoicing | FIS Global (Hypothetical)**_
+_**By Syed Irshad Ahmed | Target Role: Business Analyst – Billing & Invoicing | FIS Global (Hypothetical)**_
 
 ---
 
@@ -145,14 +145,13 @@ Built interactive dashboards in Excel and Tableau with:
 
 ## 📌 Links
 
-- [Excel Dashboard (.xlsx)](your_link_here)  
-- [Tableau Public Dashboard](your_link_here)  
-- [GitHub Repository](your_repo_link)  
-
+- [📊 Excel Dashboard (.xlsx)](https://github.com/TheSyedIrshad/Automated-Invoice-Discrepancy-Tracker/blob/main/Excel_Dashboard_Discrepancy_Tracker.xlsx)
+- [📈 Tableau Public Dashboard](https://public.tableau.com/app/profile/irshad.ahmed1445/viz/Dashboard_17545892274520/AutomatedDiscrepancyTracker)
+  
 ---
 
 ## 🤝 Let’s Connect
 
-📧 irshadahmeddata@gmail.com  
+📧 thesyedirshad17@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/thesyedirshad/)  
 🌐 [Portfolio](https://github.com/TheSyedIrshad)
